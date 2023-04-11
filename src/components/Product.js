@@ -2,16 +2,30 @@ import Image from "next/image";
 import { useState } from "react";
 import { StarIcon } from "@heroicons/react/solid";
 import Currency from "react-currency-formatter";
+import { useDispatch } from "react-redux";
+import { addToBasket } from "../slices/basketSlice";
 
 const maxRating = 5;
 const minRating = 2;
 
 function Product({ id, title, price, description, category, image }) {
-  const [rating] = useState(
-    Math.floor(Math.random() * (maxRating - minRating + 1)) + minRating
-    );
+  const dispatch = useDispatch();
 
-    const [hasPrime] = useState(Math.random() < 0.5);
+  const [rating] = useState(Math.floor(Math.random() * (maxRating - minRating + 1)) + minRating);
+
+  const [hasPrime] = useState(Math.random() < 0.5);
+
+  const addItemToBasket = () => {
+    const product = {
+      id,
+      title,
+      price,
+      description,
+      category,
+      image,
+    };
+    dispatch(addToBasket(product));
+  };
 
   return (
     <div className="relative flex flex-col m-5 bg-white z-30 p-10">
@@ -37,12 +51,18 @@ function Product({ id, title, price, description, category, image }) {
 
       {hasPrime && (
         <div className="flex items-center space-x-2 -mt-5">
-            <img className="w-12" src="https://whitebox.com/wp-content/uploads/2020/05/Prime-tag-.png" alt="" />
-            <p className="text-xs text-gray-500">FREE Same-day Delivery</p>
+          <img
+            className="w-12"
+            src="https://whitebox.com/wp-content/uploads/2020/05/Prime-tag-.png"
+            alt=""
+          />
+          <p className="text-xs text-gray-500">FREE Same-day Delivery</p>
         </div>
-        )}
+      )}
 
-        <button className="mt-auto button">Add to Cart</button>
+      <button onClick={addItemToBasket} className="mt-auto button">
+        Add to Cart
+      </button>
     </div>
   );
 }
