@@ -3,7 +3,7 @@ import { MenuIcon, SearchIcon, ShoppingCartIcon } from "@heroicons/react/outline
 import { useSession, signIn, signOut } from "next-auth/client";
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
-import { selectItems } from "../slices/basketSlice";
+import { selectItems } from "../slices/cartSlice";
 
 function Header() {
   const [session] = useSession();
@@ -54,7 +54,7 @@ function Header() {
               {items.length}
             </span>
             <ShoppingCartIcon className="h-10" />
-            <p className="hidden md:inline font-extrabold md:text-sm mt-2">Basket</p>
+            <p className="hidden md:inline font-extrabold md:text-sm mt-2">Cart</p>
           </div>
         </div>
       </div>
