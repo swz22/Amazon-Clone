@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
+import { useEffect } from "react";
 import { StarIcon } from "@heroicons/react/solid";
 import Currency from "react-currency-formatter";
 import { useDispatch } from "react-redux";
@@ -10,9 +11,15 @@ const minRating = 2;
 
 function Product({ id, title, price, description, category, image }) {
   const dispatch = useDispatch();
+  // const [rating, setRating] = useState(1);
+  // const [hasPrime, setHasPrime] = useState(true);
+
+  // useEffect(() => {
+  //   setRating(Math.floor(Math.random() * (maxRating - minRating + 1)) + minRating);
+  //   setHasPrime(Math.random() < 0.5);
+  // }, []);
 
   const [rating] = useState(Math.floor(Math.random() * (maxRating - minRating + 1)) + minRating);
-
   const [hasPrime] = useState(Math.random() < 0.5);
 
   const addItemToCart = () => {
@@ -20,9 +27,11 @@ function Product({ id, title, price, description, category, image }) {
       id,
       title,
       price,
+      rating,
       description,
       category,
       image,
+      hasPrime,
     };
     dispatch(addToCart(product));
   };
@@ -39,7 +48,7 @@ function Product({ id, title, price, description, category, image }) {
         {Array(rating)
           .fill()
           .map((_, i) => (
-            <StarIcon className="h-5 text-yellow-500" />
+            <StarIcon key={i} className="h-5 text-yellow-500" />
           ))}
       </div>
 
@@ -56,7 +65,7 @@ function Product({ id, title, price, description, category, image }) {
             src="https://whitebox.com/wp-content/uploads/2020/05/Prime-tag-.png"
             alt=""
           />
-          <p className="text-xs text-gray-500">FREE Same-day Delivery</p>
+          <p className="text-xs text-gray-500">FREE One-Day Delivery</p>
         </div>
       )}
 

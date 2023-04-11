@@ -65,7 +65,7 @@ function Header() {
           <MenuIcon className="h-6 mr-1" />
           All
         </p>
-        <p className="link">Same-Day Delivery</p>
+        <p className="link">One-Day Delivery</p>
         <p className="link">Prime Video</p>
         <p className="link">Customer Service</p>
         <p className="link hidden lg:inline-flex">Amazon Basics</p>
