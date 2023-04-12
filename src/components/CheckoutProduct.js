@@ -1,8 +1,21 @@
 import Image from "next/image";
 import Currency from "react-currency-formatter";
 import { StarIcon } from "@heroicons/react/solid";
+import { useDispatch } from "react-redux";
+import { addToCart, removeFromCart } from "../slices/cartSlice";
 
 function CheckoutProduct({ id, title, price, rating, description, category, image, hasPrime }) {
+  const dispatch = useDispatch();
+
+  const addItemToCart = () => {
+    const product = { id, title, price, rating, description, category, image, hasPrime };
+    dispatch(addToCart(product));
+  };
+
+  const removeItemFromCart = () => {
+    dispatch(removeFromCart({ id }));
+  };
+
   return (
     <div className="grid grid-cols-5">
       <Image src={image} width={200} height={200} objectFit="contain" />
@@ -35,8 +48,12 @@ function CheckoutProduct({ id, title, price, rating, description, category, imag
 
       {/* right section: add/remove buttons */}
       <div className="flex flex-col space-y-2 my-auto justify-self-end">
-        <button className="button">Add to Cart</button>
-        <button className="button">Remove from Cart</button>
+        <button className="button" onClick={addItemToCart}>
+          Add to Cart
+        </button>
+        <button className="button" onClick={removeItemFromCart}>
+          Remove from Cart
+        </button>
       </div>
     </div>
   );

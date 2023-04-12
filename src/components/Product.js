@@ -11,13 +11,6 @@ const minRating = 2;
 
 function Product({ id, title, price, description, category, image }) {
   const dispatch = useDispatch();
-  // const [rating, setRating] = useState(1);
-  // const [hasPrime, setHasPrime] = useState(true);
-
-  // useEffect(() => {
-  //   setRating(Math.floor(Math.random() * (maxRating - minRating + 1)) + minRating);
-  //   setHasPrime(Math.random() < 0.5);
-  // }, []);
 
   const [rating] = useState(Math.floor(Math.random() * (maxRating - minRating + 1)) + minRating);
   const [hasPrime] = useState(Math.random() < 0.5);
