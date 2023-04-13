@@ -10,19 +10,16 @@ export default function Home({ products }) {
         <title>Amazon Clone</title>
       </Head>
       <Header />
-
       <main className="max-w-screen-2xl mx-auto">
         <Banner />
-        <ProductFeed products={products} /> 
+        <ProductFeed products={products} />
       </main>
     </div>
   );
 }
 
 export async function getServerSideProps(context) {
-  const products = await fetch("https://fakestoreapi.com/products").then((res) =>
-    res.json()
-  );
+  const products = await fetch("https://fakestoreapi.com/products").then((res) => res.json());
 
   return {
     props: {

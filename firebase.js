@@ -1,4 +1,6 @@
-import firebase from "firebase";
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
+import "firebase/compat/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCJ-5iq6ni9pPZuKSah1LAJ0cH6C8e88Sc",
@@ -6,5 +8,10 @@ const firebaseConfig = {
   projectId: "zon2-f3294",
   storageBucket: "zon2-f3294.appspot.com",
   messagingSenderId: "275985737263",
-  appId: "1:275985737263:web:72e9cff8c4bf7d624c08da"
+  appId: "1:275985737263:web:72e9cff8c4bf7d624c08da",
 };
+
+const app = !firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app();
+
+const db = app.firestore();
+export default db;
