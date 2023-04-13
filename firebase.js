@@ -3,12 +3,12 @@ import "firebase/compat/auth";
 import "firebase/compat/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCJ-5iq6ni9pPZuKSah1LAJ0cH6C8e88Sc",
-  authDomain: "zon2-f3294.firebaseapp.com",
-  projectId: "zon2-f3294",
-  storageBucket: "zon2-f3294.appspot.com",
-  messagingSenderId: "275985737263",
-  appId: "1:275985737263:web:72e9cff8c4bf7d624c08da",
+  apiKey: "AIzaSyBhN2j9qSUV44acpPYnuTu-a-1HniHP6wA",
+  authDomain: "zn22-1e98e.firebaseapp.com",
+  projectId: "zn22-1e98e",
+  storageBucket: "zn22-1e98e.appspot.com",
+  messagingSenderId: "390759303639",
+  appId: "1:390759303639:web:ed00661c3b81da1972e392",
 };
 
 const app = !firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app();
