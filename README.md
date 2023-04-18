@@ -17,9 +17,14 @@
   <a href="#license">License</a>
 </p>
 
-## Key Features
+## Instructions for viewing live demo
+1. Add items to cart by clicking on the "add to cart" button
+2. Click the "cart" button to view your cart.
+3. Click the "sign in" button to sign in. Signing in enables the ability to view the checkout page.
+4. On the checkout page enter the following test credentials "4242 4242 4242 4242", "02/42", and "424" as your card information.
+5. Click pay. Please note you will not be charged anything for your order.
 
-## How To Use
+## How to use
 
 To clone and run this application, you'll need to install [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) on your computer.
 <br>From your command line:
