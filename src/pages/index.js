@@ -8,7 +8,7 @@ export default function Home({ products }) {
   return (
     <div>
       <Head>
-        <title>Clonazon</title>
+        <title>Amazon Clone</title>
       </Head>
       <Header />
       <main className="max-w-screen-2xl mx-auto">
