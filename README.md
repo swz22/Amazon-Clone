@@ -1,4 +1,4 @@
-  <h1 align="center">Clonazon</h1>
+  <h1 align="center">Amazon Clone</h1>
 
 <div align="center">
 	<img height="30" src="https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png" alt="React" title="React" />&nbsp;&nbsp;
