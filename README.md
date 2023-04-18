@@ -26,10 +26,10 @@ To clone and run this application, you'll need to install [Git](https://git-scm.
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/swz22/clonazon.git
+$ git clone https://github.com/swz22/Amazon-Clone.git
 
 # Change directory into the repository
-$ cd clonazon
+$ cd Amazon-Clone
 
 # Install dependencies
 $ yarn install
