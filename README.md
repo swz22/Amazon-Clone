@@ -8,7 +8,7 @@
 
 <h4 align="center">An Amazon clone with authentication and stripe payment processing.</h4>
 <p align="center">
-  <a href="https://crescendo-music.netlify.app">Click here to view a live demo!</a>
+  <a href="https://crescendo-music.netlify.app">Click here to view a live demo</a>
 </p>
 
 <p align="center">
@@ -16,13 +16,6 @@
   <a href="#how-to-use">How To Use</a> •
   <a href="#license">License</a>
 </p>
-
-## Instructions for viewing live demo
-1. Add items to cart by clicking on the "add to cart" button
-2. Click the "cart" button to view your cart.
-3. Click the "sign in" button to sign in. Signing in enables the ability to view the checkout page.
-4. On the checkout page enter the following test credentials "4242 4242 4242 4242", "02/42", and "424" as your card information.
-5. Click pay. Please note you will not be charged anything for your order.
 
 ## How to use
 
